@@ -1,25 +1,23 @@
-# javaSelenium
-Default Java Selenium project
+<b>TEST CASES</b>
 
-Create new java class in tests package which extends BaseTest.
-BaseTest will start Chrome before each test and close it after.
-Create JUnit @Test annotation and create a method bellow.
-You have run test button next to method signature.
-You can use variable driver (as WebDriver) and wdWait (as WebDriverWait)
-which are inherited from BaseHelper.
-Each page/helper class should extends BaseHelper.
 
-for eg.
+- <i>[Lilly] - Login with valid credentials</i>
 
-package tests;
+1) Navigate to "https://shop.lilly.rs/"
+2) Click on the "Prijavi se" button
+3) In the "Email adresa" field enter "123aitorfernandez123@gmail.com"
+4) In the "Lozinka" field enter "123456789"
+5) Click on the "PRIJAVI SE" button
 
-import org.junit.Test;
+Expected result: The "Dobrodošli, Aitor Fernandez!" message is visible.
 
-public class probeClassTest extends BaseTest
-{
-    @Test
-    public void probe()
-    {
-        // your code
-    }
-}
+
+- <i>[Lilly] - Login with invalid credentials</i>
+
+1) Navigate to "https://shop.lilly.rs/"
+2) Click on the "Prijavi se" button
+3) In the "Email adresa" field enter "123aitorfernandez123@gmail.com"
+4) In the "Lozinka" field enter "123"
+5) Click on the "PRIJAVI SE" button
+
+Expected result: The "Uneti podaci nisu ispravni. Molimo da proverite email i lozinku i pokušate ponovo." error message is visible.
